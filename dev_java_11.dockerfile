@@ -7,5 +7,6 @@ RUN set -eux; \
     apt update -y; \
     apt upgrade -y; \
     mkdir /root/projects; \
-    apt install git -y; \
-    apt autoremove -y; \
+    apt install git openjdk-11-jdk maven -y; \
+    apt autoremove -y;
+COPY settings.xml /root/.m2/settings.xml

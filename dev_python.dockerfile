@@ -1,6 +1,5 @@
 FROM ubuntu:22.04
 ENV LANG C.UTF-8
-ENV NODE_MIRROR https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/
 RUN set -eux; \
     sed -i 's/https/http/g' /etc/apt/sources.list; \
     sed -i 's/security.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list; \
@@ -9,11 +8,6 @@ RUN set -eux; \
     apt upgrade -y; \
     bash; \
     apt install curl -y; \
-    #apt install nodejs npm -y; \
-    #npm -g install n; \
-    #echo "export NODE_MIRROR=https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/" >> /root/.bashrc; \
-    #n stable; \
-    #apt install openjdk-11-jdk  -y; \
     apt install python3 -y; \
     apt install python3-pip -y; \
     python3 -m pip install --upgrade pip; \
