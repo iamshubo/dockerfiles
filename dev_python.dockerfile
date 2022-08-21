@@ -20,5 +20,4 @@ RUN set -eux; \
     pip3 install --no-cache-dir pyquery; \
     mkdir /root/projects; \
     apt install git -y; \
-    apt autoremove -y; \
-    ln /usr/bin/python3 /usr/bin/python; \
+    apt autoremove -y; 
